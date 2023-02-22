@@ -1,11 +1,12 @@
 {
-  "name": "example-typescript-package",
-  "version": "0.2.2",
-  "description": "",
+  "name": "impetus-types",
+  "version": "1.1.1",
+  "description": "impetus typegen",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "umd:main": "dist/umd/index.js",
   "types": "dist/types/index.d.js",
+  "postversion": "git push --follow-tags" ,
   "scripts": {
     "postinstall": "husky install",
     "prepublishOnly": "pinst --disable",
@@ -19,7 +20,11 @@
     "package": "npm run build && npm pack",
     "test": "jest --no-cache --runInBand",
     "test:cov": "jest --coverage --no-cache --runInBand",
-    "addscope": "node tools/packagejson name @tomchen/example-typescript-package"
+    "addscope": "node tools/packagejson name @tomchen/example-typescript-package",
+    "generate:defs": "ts-node --skip-project node_modules/.bin/polkadot-types-from-defs --package sample-polkadotjs-typegen/interfaces --input ./src/impetus-interfaces --endpoint ./metadata.json",
+    "generate:meta": "ts-node --skip-project node_modules/.bin/polkadot-types-from-chain --package sample-polkadotjs-typegen/interfaces --endpoint ./metadata.json --output ./src/impetus-interfaces",
+    "typegen": "yarn generate:defs && yarn generate:meta",
+    "lint": "tsc --noEmit --pretty"
   },
   "publishConfig": {
     "access": "public"
@@ -28,30 +33,23 @@
     "dist"
   ],
   "keywords": [
-    "example",
-    "typescript",
-    "npm",
-    "package",
-    "sample",
-    "boilerplate",
-    "starter",
-    "demo",
-    "cjs",
-    "esm",
-    "umd"
+    "impetus"
   ],
-  "author": "Tom Chen <tomchen.org@gmail.com>",
+  "author": "dnt-team",
   "license": "MIT",
-  "homepage": "https://github.com/tomchen/example-typescript-package",
+  "homepage": "https://github.com/dnt-team/impetus-types",
   "repository": {
     "type": "git",
-    "url": "git@github.com:tomchen/example-typescript-package.git"
+    "url": "https://github.com/dnt-team/impetus-types.git"
   },
   "bugs": {
-    "url": "https://github.com/tomchen/example-typescript-package/issues"
+    "url": "https://github.com/dnt-team/impetus-types/issues"
   },
   "dependencies": {},
   "devDependencies": {
+    "@polkadot/api": "^9.14.2",
+    "@polkadot/typegen": "^9.14.2",
+    "ts-node": "^10.9.1",
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
     "@types/jest": "^27.0.1",
