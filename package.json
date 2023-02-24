@@ -20,7 +20,7 @@
     "package": "npm run build && npm pack",
     "test": "jest --no-cache --runInBand",
     "test:cov": "jest --coverage --no-cache --runInBand",
-    "addscope": "node tools/packagejson name @tomchen/example-typescript-package",
+    "addscope": "node tools/packagejson name impetus-types",
     "generate:defs": "ts-node --skip-project node_modules/.bin/polkadot-types-from-defs --package sample-polkadotjs-typegen/interfaces --input ./src/impetus-interfaces --endpoint ./metadata.json",
     "generate:meta": "ts-node --skip-project node_modules/.bin/polkadot-types-from-chain --package sample-polkadotjs-typegen/interfaces --endpoint ./metadata.json --output ./src/impetus-interfaces",
     "typegen": "yarn generate:defs && yarn generate:meta",
