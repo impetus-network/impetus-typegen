@@ -33,4 +33,4 @@ export async function indexRoundInfo(): Promise<void> {
 
 Start your source and enjoy.
 Just a really simple walk-through to customizing the API TypeScript definitions for impetus chain.
-Please reach out us at https://github.com/dnt-team/impetus-types.
+Please reach out us at https://github.com/dnt-team/impetus-types if you have any question
