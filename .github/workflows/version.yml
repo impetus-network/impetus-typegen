@@ -1,4 +1,4 @@
-name: Auto Update Version
+name: Auto-update version and release
 
 on:
   push:
@@ -6,20 +6,29 @@ on:
       - main
 
 jobs:
-  update-version:
+  auto-update:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
           node-version: '14.x'
-      - name: Install Dependencies
-        run: yarn install --frozen-lockfile
-      - name: Update Version
+          
+      - name: Auto-update version and commit changes
         run: |
-          git config --global user.name "developer-impetus"
-          git config --global user.email "developer@impetus.bet"
-          npm version patch -m "Bump version to %s [skip ci]"
-          git push --follow-tags
+          npm install -g npm-version-up
+          npm-version-up patch
+          git config --local user.name "developer-impetus"
+          git config --local user.email "developer@impetus.bet"
+          git add package.json
+          git commit -m "Auto-update version"
+          
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          branch: main
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          force: true
