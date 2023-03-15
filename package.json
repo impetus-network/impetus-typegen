@@ -1,12 +1,12 @@
 {
-  "name": "impetus-types",
-  "version": "1.1.3",
+  "name": "impetus-typegen",
+  "version": "1.2.1",
   "description": "impetus typegen",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "umd:main": "dist/umd/index.js",
   "types": "dist/types/index.d.js",
-  "postversion": "git push --follow-tags" ,
+  "postversion": "git push --follow-tags",
   "scripts": {
     "postinstall": "husky install",
     "prepublishOnly": "pinst --disable",
@@ -20,9 +20,9 @@
     "package": "npm run build && npm pack",
     "test": "jest --no-cache --runInBand",
     "test:cov": "jest --coverage --no-cache --runInBand",
-    "addscope": "node tools/packagejson name impetus-types",
-    "generate:defs": "ts-node --skip-project node_modules/.bin/polkadot-types-from-defs --package sample-polkadotjs-typegen/interfaces --input ./src/impetus-interfaces --endpoint ./metadata.json",
-    "generate:meta": "ts-node --skip-project node_modules/.bin/polkadot-types-from-chain --package sample-polkadotjs-typegen/interfaces --endpoint ./metadata.json --output ./src/impetus-interfaces",
+    "addscope": "node tools/packagejson name impetus-typegen",
+    "generate:defs": "ts-node --skip-project node_modules/.bin/polkadot-types-from-defs --package impetus-typegen/impetus-interfaces --input ./src/impetus-interfaces --endpoint ./metadata.json",
+    "generate:meta": "ts-node --skip-project node_modules/.bin/polkadot-types-from-chain --package impetus-typegen/impetus-interfaces --endpoint ./metadata.json --output ./src/impetus-interfaces",
     "typegen": "yarn generate:defs && yarn generate:meta",
     "lint": "tsc --noEmit --pretty"
   },
@@ -37,13 +37,13 @@
   ],
   "author": "dnt-team",
   "license": "MIT",
-  "homepage": "https://github.com/dnt-team/impetus-types",
+  "homepage": "https://github.com/dnt-team/impetus-typegen",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dnt-team/impetus-types.git"
+    "url": "https://github.com/dnt-team/impetus-typegen.git"
   },
   "bugs": {
-    "url": "https://github.com/dnt-team/impetus-types/issues"
+    "url": "https://github.com/dnt-team/impetus-typegen/issues"
   },
   "dependencies": {},
   "devDependencies": {

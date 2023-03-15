@@ -1,6 +1,6 @@
 export default {
   types: {
-    LotteryConfig: {
+    LuckyNumberConfig: {
       minPrice: 'Balance',
       start: 'BlockNumber',
       length: 'BlockNumber',
