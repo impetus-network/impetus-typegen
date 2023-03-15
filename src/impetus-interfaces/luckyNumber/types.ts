@@ -4,8 +4,8 @@
 import type { Struct, bool, u8 } from '@polkadot/types-codec';
 import type { Balance, BlockNumber } from '@polkadot/types/interfaces/runtime';
 
-/** @name LotteryConfig */
-export interface LotteryConfig extends Struct {
+/** @name LuckyNumberConfig */
+export interface LuckyNumberConfig extends Struct {
   readonly minPrice: Balance;
   readonly start: BlockNumber;
   readonly length: BlockNumber;
