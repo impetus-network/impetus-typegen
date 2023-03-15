@@ -19,5 +19,7 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Update Version
         run: |
+          git config --global user.name "developer-impetus"
+          git config --global user.email "developer@impetus.bet"
           npm version minor -m "Bump version to %s [skip ci]"
           git push --follow-tags
