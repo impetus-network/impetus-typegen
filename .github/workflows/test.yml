@@ -19,6 +19,7 @@ on:
     branches:
       - main
       - master
+      - feature/test-ci-cd
 
 jobs:
   test:
@@ -27,7 +28,7 @@ jobs:
       matrix:
         os:
           - ubuntu-latest
-        node: [14.x]
+        node: [18.x]
 
     steps:
       - uses: actions/checkout@v2
