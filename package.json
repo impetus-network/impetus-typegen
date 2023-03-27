@@ -1,5 +1,5 @@
 {
-  "name": "@impetus/typegen1",
+  "name": "@developer_impetus/typegen1",
   "version": "2.0.0",
   "description": "impetus typegen",
   "main": "dist/cjs/index.js",
