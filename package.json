@@ -25,7 +25,13 @@
     "generate:meta": "ts-node --skip-project node_modules/.bin/polkadot-types-from-chain --package impetus-typegen/impetus-interfaces --endpoint ./metadata.json --output ./src/impetus-interfaces",
     "typegen": "yarn generate:defs && yarn generate:meta",
     "lint": "tsc --noEmit --pretty",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "commit": "git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
   "release": {
     "branches": [
@@ -84,6 +90,7 @@
     "@semantic-release/exec": "semantic-release/exec",
     "@semantic-release/github": "semantic-release/github",
     "@semantic-release/npm": "semantic-release/npm",
+    "commitizen": "^4.3.0",
     "semantic-release": "^21.0.0"
   },
   "devDependencies": {
