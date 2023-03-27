@@ -42,14 +42,12 @@
       "@semantic-release/github"
     ],
     "plugins": [
+      "@semantic-release/commit-analyzerr",
       "@semantic-release/release-notes-generator",
-      [
-        "@semantic-release/npm",
-        {
-          "pkgRoot": "dist",
-          "tarballDir": "dist"
-        }
-      ]
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/git",
+      "@semantic-release/github"
     ]
   },
   "publishConfig": {
