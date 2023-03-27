@@ -49,13 +49,6 @@
           "pkgRoot": "dist",
           "tarballDir": "dist"
         }
-      ],
-      [
-        "@semantic-release/github",
-        {
-          "path": "@semantic-release/exec",
-          "cmd": "publish-package"
-        }
       ]
     ]
   },
