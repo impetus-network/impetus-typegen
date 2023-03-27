@@ -72,6 +72,7 @@
     "url": "https://github.com/dnt-team/impetus-typegen/issues"
   },
   "dependencies": {
+    "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/exec": "semantic-release/exec",
     "@semantic-release/github": "semantic-release/github",
     "@semantic-release/npm": "semantic-release/npm",
