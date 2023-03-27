@@ -91,6 +91,7 @@
     "@semantic-release/github": "semantic-release/github",
     "@semantic-release/npm": "semantic-release/npm",
     "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
     "semantic-release": "^21.0.0"
   },
   "devDependencies": {
