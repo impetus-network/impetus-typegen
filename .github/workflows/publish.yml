@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+      - feature/test-ci-cd
 jobs:
   release:
     name: Release

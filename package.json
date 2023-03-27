@@ -29,7 +29,8 @@
   },
   "release": {
     "branches": [
-      "main"
+      "main",
+      "feature/test-ci-cd"
     ],
     "verifyConditions": [
       "@semantic-release/github"
