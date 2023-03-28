@@ -1,3 +1,20 @@
+# [3.0.0](https://github.com/dnt-team/impetus-typegen/compare/v2.0.0...v3.0.0) (2023-03-28)
+
+
+### Bug Fixes
+
+* **package.json:** test ([5fd684b](https://github.com/dnt-team/impetus-typegen/commit/5fd684b91714562098f52e5c2efd724d3b8a3f87))
+
+
+### Features
+
+* **package.json:** init package ([05711d7](https://github.com/dnt-team/impetus-typegen/commit/05711d7209b50df513e8c22b3b89e81fcee728be))
+
+
+### BREAKING CHANGES
+
+* **package.json:** Init npmjs package
+
 # [2.0.0](https://github.com/dnt-team/impetus-typegen/compare/v1.3.0...v2.0.0) (2023-03-27)
 
 
