@@ -1,6 +1,6 @@
 {
-  "name": "@impetus-bet/typegen1",
-  "version": "3.1.0",
+  "name": "@impetus-bet/typegen2",
+  "version": "1.0.0",
   "description": "impetus typegen",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
