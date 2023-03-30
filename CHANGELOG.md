@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/dnt-team/impetus-typegen/compare/v1.0.2...v1.0.3) (2023-03-30)
+
+
+### Bug Fixes
+
+* **package.json:** update publish configuration, only publish dist folder ([e1be919](https://github.com/dnt-team/impetus-typegen/commit/e1be91936aaf4a7aca15c5902ac36c4934f213b1))
+
 ## [1.0.2](https://github.com/dnt-team/impetus-typegen/compare/v1.0.1...v1.0.2) (2023-03-30)
 
 
