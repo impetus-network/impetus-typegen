@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/dnt-team/impetus-typegen/compare/v1.0.0...v1.1.0) (2023-03-30)
+
+
+### Features
+
+* **impetus.specs.ts:** test pr merged and trigger release ([9742700](https://github.com/dnt-team/impetus-typegen/commit/9742700a279ff406b829719609f32bf2b3710911))
+
 # 1.0.0 (2023-03-28)
 
 
