@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/dnt-team/impetus-typegen/compare/v1.0.4...v1.0.5) (2023-03-30)
+
+
+### Bug Fixes
+
+* create .releaserc.json ([853708c](https://github.com/dnt-team/impetus-typegen/commit/853708ceb548a854289720f5a03fe09be0bf3fd3))
+
 ## [1.0.4](https://github.com/dnt-team/impetus-typegen/compare/v1.0.3...v1.0.4) (2023-03-30)
 
 
