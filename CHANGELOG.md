@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/dnt-team/impetus-typegen/compare/v1.0.3...v1.0.4) (2023-03-30)
+
+
+### Bug Fixes
+
+* **publish.yml:** fix bug doesnt release ([6f939ff](https://github.com/dnt-team/impetus-typegen/commit/6f939ff91abb73f15348956e009f5fabdbabb7d0))
+
 ## [1.0.3](https://github.com/dnt-team/impetus-typegen/compare/v1.0.2...v1.0.3) (2023-03-30)
 
 
