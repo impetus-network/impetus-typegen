@@ -1,5 +1,5 @@
 {
-  "name": "@impetus/typegen1",
+  "name": "@impetus-bet/typegen",
   "version": "1.0.0",
   "description": "impetus typegen",
   "main": "dist/cjs/index.js",
@@ -25,7 +25,13 @@
     "generate:meta": "ts-node --skip-project node_modules/.bin/polkadot-types-from-chain --package impetus-typegen/impetus-interfaces --endpoint ./metadata.json --output ./src/impetus-interfaces",
     "typegen": "yarn generate:defs && yarn generate:meta",
     "lint": "tsc --noEmit --pretty",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "commit": "git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
   "release": {
     "branches": [
@@ -35,28 +41,13 @@
     "verifyConditions": [
       "@semantic-release/github"
     ],
-    "prepare": [
-      {
-        "path": "@semantic-release/exec",
-        "cmd": "set-version ${nextRelease.version}"
-      }
-    ],
     "plugins": [
+      "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
-      [
-        "@semantic-release/npm",
-        {
-          "pkgRoot": "dist",
-          "tarballDir": "dist"
-        }
-      ],
-      [
-        "@semantic-release/github",
-        {
-          "path": "@semantic-release/exec",
-          "cmd": "publish-package"
-        }
-      ]
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/git",
+      "@semantic-release/github"
     ]
   },
   "publishConfig": {
@@ -81,9 +72,13 @@
     "url": "https://github.com/dnt-team/impetus-typegen/issues"
   },
   "dependencies": {
+    "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/exec": "semantic-release/exec",
-    "@semantic-release/github": "semantic-release/github",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^8.0.7",
     "@semantic-release/npm": "semantic-release/npm",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
     "semantic-release": "^21.0.0"
   },
   "devDependencies": {
