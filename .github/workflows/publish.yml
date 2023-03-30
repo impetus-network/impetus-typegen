@@ -19,7 +19,9 @@ jobs:
       - name: Install dependencies
         run: yarn install
       - name: Build packages
-        run: yarn package-build
+        run: yarn build
+      - name: Post build
+        run: yarn post-build
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
