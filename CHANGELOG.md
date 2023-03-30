@@ -1,3 +1,11 @@
+## [1.0.2](https://github.com/dnt-team/impetus-typegen/compare/v1.0.1...v1.0.2) (2023-03-30)
+
+
+### Bug Fixes
+
+* **package.json:** trigger release ([375dbcd](https://github.com/dnt-team/impetus-typegen/commit/375dbcd057940782bed54597fc7193e2ffa69334))
+* **publish.yml:** remove cd dist ([7892637](https://github.com/dnt-team/impetus-typegen/commit/78926379a214f792794461b4dbbeee2d8022cfe1))
+
 ## [1.0.1](https://github.com/dnt-team/impetus-typegen/compare/v1.0.0...v1.0.1) (2023-03-30)
 
 
