@@ -8,8 +8,8 @@ import '@polkadot/api-base/types/storage';
 import type { ApiTypes, AugmentedQuery, QueryableStorageEntry } from '@polkadot/api-base/types';
 import type { BTreeSet, Bytes, Option, U256, Vec, bool, u128, u32, u64, u8 } from '@polkadot/types-codec';
 import type { AnyNumber, ITuple } from '@polkadot/types-codec/types';
-import type { AccountId32, H160, H256, Permill } from '@polkadot/types/interfaces/runtime';
-import type { EthereumBlock, EthereumReceiptReceiptV3, EthereumTransactionTransactionV2, FpRpcTransactionStatus, FrameSupportDispatchPerDispatchClassWeight, FrameSystemAccountInfo, FrameSystemEventRecord, FrameSystemLastRuntimeUpgradeInfo, FrameSystemPhase, PalletAssetsApproval, PalletAssetsAssetAccount, PalletAssetsAssetDetails, PalletAssetsAssetMetadata, PalletBalancesAccountData, PalletBalancesBalanceLock, PalletBalancesReserveData, PalletBettingBettingRound, PalletGrandpaStoredPendingChange, PalletGrandpaStoredState, PalletLuckyNumberLotteryConfig, PalletTransactionPaymentReleases, SpConsensusAuraSr25519AppSr25519Public, SpRuntimeDigest } from '@polkadot/types/lookup';
+import type { AccountId32, Call, H160, H256, Permill } from '@polkadot/types/interfaces/runtime';
+import type { EthereumBlock, EthereumReceiptReceiptV3, EthereumTransactionTransactionV2, FpRpcTransactionStatus, FrameSupportDispatchPerDispatchClassWeight, FrameSystemAccountInfo, FrameSystemEventRecord, FrameSystemLastRuntimeUpgradeInfo, FrameSystemPhase, PalletAssetsApproval, PalletAssetsAssetAccount, PalletAssetsAssetDetails, PalletAssetsAssetMetadata, PalletBalancesAccountData, PalletBalancesBalanceLock, PalletBalancesReserveData, PalletBettingBettingRound, PalletCollectiveVotes, PalletGrandpaStoredPendingChange, PalletGrandpaStoredState, PalletLuckyNumberLotteryConfig, PalletTransactionPaymentReleases, SpConsensusAuraSr25519AppSr25519Public, SpRuntimeDigest } from '@polkadot/types/lookup';
 import type { Observable } from '@polkadot/types/types';
 
 export type __AugmentedQuery<ApiType extends ApiTypes> = AugmentedQuery<ApiType, () => unknown>;
@@ -224,6 +224,36 @@ declare module '@polkadot/api-base/types/storage' {
        **/
       userPredictionValue: AugmentedQuery<ApiType, (arg1: u32 | AnyNumber | Uint8Array, arg2: ITuple<[AccountId32, u8]> | [AccountId32 | string | Uint8Array, u8 | AnyNumber | Uint8Array]) => Observable<u128>, [u32, ITuple<[AccountId32, u8]>]> & QueryableStorageEntry<ApiType, [u32, ITuple<[AccountId32, u8]>]>;
       winners: AugmentedQuery<ApiType, (arg: ITuple<[u32, u8]> | [u32 | AnyNumber | Uint8Array, u8 | AnyNumber | Uint8Array]) => Observable<BTreeSet<AccountId32>>, [ITuple<[u32, u8]>]> & QueryableStorageEntry<ApiType, [ITuple<[u32, u8]>]>;
+      /**
+       * Generic query
+       **/
+      [key: string]: QueryableStorageEntry<ApiType>;
+    };
+    managerCommittee: {
+      /**
+       * The current members of the collective. This is stored sorted (just by value).
+       **/
+      members: AugmentedQuery<ApiType, () => Observable<Vec<AccountId32>>, []> & QueryableStorageEntry<ApiType, []>;
+      /**
+       * The prime member that helps determine the default vote behavior in case of absentations.
+       **/
+      prime: AugmentedQuery<ApiType, () => Observable<Option<AccountId32>>, []> & QueryableStorageEntry<ApiType, []>;
+      /**
+       * Proposals so far.
+       **/
+      proposalCount: AugmentedQuery<ApiType, () => Observable<u32>, []> & QueryableStorageEntry<ApiType, []>;
+      /**
+       * Actual proposal for a given hash, if it's current.
+       **/
+      proposalOf: AugmentedQuery<ApiType, (arg: H256 | string | Uint8Array) => Observable<Option<Call>>, [H256]> & QueryableStorageEntry<ApiType, [H256]>;
+      /**
+       * The hashes of the active proposals.
+       **/
+      proposals: AugmentedQuery<ApiType, () => Observable<Vec<H256>>, []> & QueryableStorageEntry<ApiType, []>;
+      /**
+       * Votes on a given proposal, if it is ongoing.
+       **/
+      voting: AugmentedQuery<ApiType, (arg: H256 | string | Uint8Array) => Observable<Option<PalletCollectiveVotes>>, [H256]> & QueryableStorageEntry<ApiType, [H256]>;
       /**
        * Generic query
        **/
