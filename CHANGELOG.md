@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/dnt-team/impetus-typegen/compare/v1.0.5...v1.1.0) (2023-04-08)
+
+
+### Features
+
+* **interface:** add maganage commitee ([ce2a231](https://github.com/dnt-team/impetus-typegen/commit/ce2a2310e516cdbda340279886bd245f69156a7f))
+
 ## [1.0.5](https://github.com/dnt-team/impetus-typegen/compare/v1.0.4...v1.0.5) (2023-03-30)
 
 
