@@ -26,7 +26,9 @@
     "typegen": "yarn generate:defs && yarn generate:meta",
     "lint": "tsc --noEmit --pretty",
     "semantic-release": "semantic-release",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "metadata": "curl -H \"Content-Type: application/json\" -d '{\"id\":\"1\", \"jsonrpc\":\"2.0\", \"method\": \"state_getMetadata\", \"params\":[]}' http://localhost:9933 > metadata.json"
+
   },
   "config": {
     "commitizen": {
