@@ -1,3 +1,11 @@
+## [1.1.1](https://github.com/dnt-team/impetus-typegen/compare/v1.1.0...v1.1.1) (2023-06-20)
+
+
+### Bug Fixes
+
+* **merge main:** merge main ([aeee970](https://github.com/dnt-team/impetus-typegen/commit/aeee9707366d32b3b52dc47ec4449c360953a279))
+* **update typegen:** fix typegen for job ([822a825](https://github.com/dnt-team/impetus-typegen/commit/822a8255b44ec7b710521dc35f10cd4facf4edd1))
+
 # [1.1.0](https://github.com/dnt-team/impetus-typegen/compare/v1.0.5...v1.1.0) (2023-04-08)
 
 
