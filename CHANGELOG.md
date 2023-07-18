@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/dnt-team/impetus-typegen/compare/v1.1.1...v1.2.0) (2023-07-18)
+
+
+### Features
+
+* update winners method from impetus ([1e3e408](https://github.com/dnt-team/impetus-typegen/commit/1e3e408f9115b8e9e1e846b61f62acb6ee4cf60c))
+
 ## [1.1.1](https://github.com/dnt-team/impetus-typegen/compare/v1.1.0...v1.1.1) (2023-06-20)
 
 
