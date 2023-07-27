@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/dnt-team/impetus-typegen/compare/v1.2.0...v1.3.0) (2023-07-27)
+
+
+### Features
+
+* update blockchain ([fc1f2d0](https://github.com/dnt-team/impetus-typegen/commit/fc1f2d0a3813e149311ae70e1f83a43ed6858866))
+
 # [1.2.0](https://github.com/dnt-team/impetus-typegen/compare/v1.1.1...v1.2.0) (2023-07-18)
 
 
