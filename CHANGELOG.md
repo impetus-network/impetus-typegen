@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/dnt-team/impetus-typegen/compare/v1.3.0...v1.3.1) (2023-07-27)
+
+
+### Bug Fixes
+
+* fix impetus build ([fe40326](https://github.com/dnt-team/impetus-typegen/commit/fe40326d3674ab954f4353b8356f23e6275520d2))
+
 # [1.3.0](https://github.com/dnt-team/impetus-typegen/compare/v1.2.0...v1.3.0) (2023-07-27)
 
 
