@@ -35,4 +35,4 @@ Start your source and enjoy.
 Just a really simple walk-through to customizing the API TypeScript definitions for impetus chain.
 Please reach out us at https://github.com/dnt-team/impetus-typegen if you have any question
 
-Generate metadata.json from blockchain: curl -H "Content-Type: application/json" -d '{"id":"1", "jsonrpc":"2.0", "method": "state_getMetadata", "params":[]}' http://localhost:9933
+Generate metadata.json from blockchain: curl -H "Content-Type: application/json" -d '{"id":"1", "jsonrpc":"2.0", "method": "state_getMetadata", "params":[]}' http://localhost:9944
