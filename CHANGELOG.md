@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/dnt-team/impetus-typegen/compare/v1.3.1...v1.3.2) (2023-07-30)
+
+
+### Bug Fixes
+
+* **update query winners:** update query winners based on impetus ([9908502](https://github.com/dnt-team/impetus-typegen/commit/9908502d95cbfc6967faec39d7123596c3b50477))
+
 ## [1.3.1](https://github.com/dnt-team/impetus-typegen/compare/v1.3.0...v1.3.1) (2023-07-27)
 
 
