@@ -200,7 +200,7 @@ declare module '@polkadot/api-base/types/storage' {
        * Total number of tickets sold.
        **/
       userPredictionValue: AugmentedQuery<ApiType, (arg1: u32 | AnyNumber | Uint8Array, arg2: ITuple<[AccountId32, u8]> | [AccountId32 | string | Uint8Array, u8 | AnyNumber | Uint8Array]) => Observable<u128>, [u32, ITuple<[AccountId32, u8]>]> & QueryableStorageEntry<ApiType, [u32, ITuple<[AccountId32, u8]>]>;
-      winners: AugmentedQuery<ApiType, (arg: u32 | AnyNumber | Uint8Array) => Observable<BTreeSet<AccountId32>>, [u32]> & QueryableStorageEntry<ApiType, [u32]>;
+      winners: AugmentedQuery<ApiType, (arg: ITuple<[u32, u8]> | [u32 | AnyNumber | Uint8Array, u8 | AnyNumber | Uint8Array]) => Observable<BTreeSet<AccountId32>>, [ITuple<[u32, u8]>]> & QueryableStorageEntry<ApiType, [ITuple<[u32, u8]>]>;
       /**
        * Generic query
        **/
