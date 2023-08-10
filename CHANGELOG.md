@@ -1,3 +1,10 @@
+## [1.3.3](https://github.com/dnt-team/impetus-typegen/compare/v1.3.2...v1.3.3) (2023-08-10)
+
+
+### Bug Fixes
+
+* **update package.json:** update package.json and rebuild ([b191289](https://github.com/dnt-team/impetus-typegen/commit/b1912895677a6f4fb61bd919f273321706fe5c44))
+
 ## [1.3.2](https://github.com/dnt-team/impetus-typegen/compare/v1.3.1...v1.3.2) (2023-07-30)
 
 
