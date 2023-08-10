@@ -57,6 +57,15 @@ declare module '@polkadot/api-base/types/errors' {
        **/
       [key: string]: AugmentedError<ApiType>;
     };
+    did: {
+      InvalidOrigin: AugmentedError<ApiType>;
+      NotAllowedToMutate: AugmentedError<ApiType>;
+      NotAllowedToRemove: AugmentedError<ApiType>;
+      /**
+       * Generic error
+       **/
+      [key: string]: AugmentedError<ApiType>;
+    };
     ethereum: {
       /**
        * Signature is invalid.
@@ -283,6 +292,16 @@ declare module '@polkadot/api-base/types/errors' {
        * and the new runtime.
        **/
       SpecVersionNeedsToIncrease: AugmentedError<ApiType>;
+      /**
+       * Generic error
+       **/
+      [key: string]: AugmentedError<ApiType>;
+    };
+    utility: {
+      /**
+       * Too many calls batched.
+       **/
+      TooManyCalls: AugmentedError<ApiType>;
       /**
        * Generic error
        **/

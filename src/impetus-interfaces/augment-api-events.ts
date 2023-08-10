@@ -116,6 +116,18 @@ declare module '@polkadot/api-base/types/events' {
        **/
       [key: string]: AugmentedEvent<ApiType>;
     };
+    did: {
+      AddedManager: AugmentedEvent<ApiType, [manager: AccountId32], { manager: AccountId32 }>;
+      AddedUserAddress: AugmentedEvent<ApiType, [who: AccountId32], { who: AccountId32 }>;
+      AddedUserToList: AugmentedEvent<ApiType, [who: AccountId32, listName: Bytes], { who: AccountId32, listName: Bytes }>;
+      RemovedManager: AugmentedEvent<ApiType, [manager: AccountId32], { manager: AccountId32 }>;
+      RemovedUserAddress: AugmentedEvent<ApiType, [who: AccountId32], { who: AccountId32 }>;
+      RemovedUserFromList: AugmentedEvent<ApiType, [who: AccountId32, listName: Bytes], { who: AccountId32, listName: Bytes }>;
+      /**
+       * Generic event
+       **/
+      [key: string]: AugmentedEvent<ApiType>;
+    };
     ethereum: {
       /**
        * An ethereum transaction was successfully executed.
@@ -277,6 +289,37 @@ declare module '@polkadot/api-base/types/events' {
        * has been paid by `who`.
        **/
       TransactionFeePaid: AugmentedEvent<ApiType, [who: AccountId32, actualFee: u128, tip: u128], { who: AccountId32, actualFee: u128, tip: u128 }>;
+      /**
+       * Generic event
+       **/
+      [key: string]: AugmentedEvent<ApiType>;
+    };
+    utility: {
+      /**
+       * Batch of dispatches completed fully with no error.
+       **/
+      BatchCompleted: AugmentedEvent<ApiType, []>;
+      /**
+       * Batch of dispatches completed but has errors.
+       **/
+      BatchCompletedWithErrors: AugmentedEvent<ApiType, []>;
+      /**
+       * Batch of dispatches did not complete fully. Index of first failing dispatch given, as
+       * well as the error.
+       **/
+      BatchInterrupted: AugmentedEvent<ApiType, [index: u32, error: SpRuntimeDispatchError], { index: u32, error: SpRuntimeDispatchError }>;
+      /**
+       * A call was dispatched.
+       **/
+      DispatchedAs: AugmentedEvent<ApiType, [result: Result<Null, SpRuntimeDispatchError>], { result: Result<Null, SpRuntimeDispatchError> }>;
+      /**
+       * A single item within a Batch of dispatches has completed with no error.
+       **/
+      ItemCompleted: AugmentedEvent<ApiType, []>;
+      /**
+       * A single item within a Batch of dispatches has completed with error.
+       **/
+      ItemFailed: AugmentedEvent<ApiType, [error: SpRuntimeDispatchError], { error: SpRuntimeDispatchError }>;
       /**
        * Generic event
        **/

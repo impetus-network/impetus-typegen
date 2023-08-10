@@ -99,6 +99,15 @@ declare module '@polkadot/api-base/types/storage' {
        **/
       [key: string]: QueryableStorageEntry<ApiType>;
     };
+    did: {
+      externalIdAddress: AugmentedQuery<ApiType, (arg: AccountId32 | string | Uint8Array) => Observable<ITuple<[Bytes, Bytes]>>, [AccountId32]> & QueryableStorageEntry<ApiType, [AccountId32]>;
+      palletManager: AugmentedQuery<ApiType, (arg: AccountId32 | string | Uint8Array) => Observable<bool>, [AccountId32]> & QueryableStorageEntry<ApiType, [AccountId32]>;
+      userList: AugmentedQuery<ApiType, (arg1: Bytes | string | Uint8Array, arg2: AccountId32 | string | Uint8Array) => Observable<bool>, [Bytes, AccountId32]> & QueryableStorageEntry<ApiType, [Bytes, AccountId32]>;
+      /**
+       * Generic query
+       **/
+      [key: string]: QueryableStorageEntry<ApiType>;
+    };
     dynamicFee: {
       minGasPrice: AugmentedQuery<ApiType, () => Observable<U256>, []> & QueryableStorageEntry<ApiType, []>;
       targetMinGasPrice: AugmentedQuery<ApiType, () => Observable<Option<U256>>, []> & QueryableStorageEntry<ApiType, []>;
