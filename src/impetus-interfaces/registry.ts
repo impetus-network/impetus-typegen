@@ -5,7 +5,7 @@
 // this is required to allow for ambient/previous definitions
 import '@polkadot/types/types/registry';
 
-import type { EthbloomBloom, EthereumBlock, EthereumHeader, EthereumLog, EthereumReceiptEip658ReceiptData, EthereumReceiptReceiptV3, EthereumTransactionAccessListItem, EthereumTransactionEip1559Transaction, EthereumTransactionEip2930Transaction, EthereumTransactionLegacyTransaction, EthereumTransactionTransactionAction, EthereumTransactionTransactionSignature, EthereumTransactionTransactionV2, EthereumTypesHashH64, EvmCoreErrorExitError, EvmCoreErrorExitFatal, EvmCoreErrorExitReason, EvmCoreErrorExitRevert, EvmCoreErrorExitSucceed, FinalityGrandpaEquivocationPrecommit, FinalityGrandpaEquivocationPrevote, FinalityGrandpaPrecommit, FinalityGrandpaPrevote, FpRpcTransactionStatus, FrameSupportDispatchDispatchClass, FrameSupportDispatchDispatchInfo, FrameSupportDispatchPays, FrameSupportDispatchPerDispatchClassU32, FrameSupportDispatchPerDispatchClassWeight, FrameSupportDispatchPerDispatchClassWeightsPerClass, FrameSupportDispatchRawOrigin, FrameSupportPalletId, FrameSupportTokensMiscBalanceStatus, FrameSystemAccountInfo, FrameSystemCall, FrameSystemError, FrameSystemEvent, FrameSystemEventRecord, FrameSystemExtensionsCheckGenesis, FrameSystemExtensionsCheckNonZeroSender, FrameSystemExtensionsCheckNonce, FrameSystemExtensionsCheckSpecVersion, FrameSystemExtensionsCheckTxVersion, FrameSystemExtensionsCheckWeight, FrameSystemLastRuntimeUpgradeInfo, FrameSystemLimitsBlockLength, FrameSystemLimitsBlockWeights, FrameSystemLimitsWeightsPerClass, FrameSystemPhase, ImpetusRuntimeOriginCaller, ImpetusRuntimeRuntime, PalletBalancesAccountData, PalletBalancesBalanceLock, PalletBalancesCall, PalletBalancesError, PalletBalancesEvent, PalletBalancesIdAmount, PalletBalancesReasons, PalletBalancesReserveData, PalletBaseFeeCall, PalletBaseFeeEvent, PalletCollectiveCall, PalletCollectiveError, PalletCollectiveEvent, PalletCollectiveRawOrigin, PalletCollectiveVotes, PalletDidCall, PalletDidError, PalletDidEvent, PalletDynamicFeeCall, PalletEthereumCall, PalletEthereumError, PalletEthereumEvent, PalletEthereumRawOrigin, PalletEvmCall, PalletEvmCodeMetadata, PalletEvmError, PalletEvmEvent, PalletGrandpaCall, PalletGrandpaError, PalletGrandpaEvent, PalletGrandpaStoredPendingChange, PalletGrandpaStoredState, PalletHotfixSufficientsCall, PalletHotfixSufficientsError, PalletLuckyNumberCall, PalletLuckyNumberError, PalletLuckyNumberEvent, PalletLuckyNumberLotteryConfig, PalletSudoCall, PalletSudoError, PalletSudoEvent, PalletTimestampCall, PalletTransactionPaymentChargeTransactionPayment, PalletTransactionPaymentEvent, PalletTransactionPaymentReleases, PalletUtilityCall, PalletUtilityError, PalletUtilityEvent, SpArithmeticArithmeticError, SpConsensusAuraSr25519AppSr25519Public, SpConsensusGrandpaAppPublic, SpConsensusGrandpaAppSignature, SpConsensusGrandpaEquivocation, SpConsensusGrandpaEquivocationProof, SpCoreEcdsaSignature, SpCoreEd25519Public, SpCoreEd25519Signature, SpCoreSr25519Public, SpCoreSr25519Signature, SpCoreVoid, SpRuntimeDigest, SpRuntimeDigestDigestItem, SpRuntimeDispatchError, SpRuntimeModuleError, SpRuntimeMultiSignature, SpRuntimeTokenError, SpRuntimeTransactionalError, SpVersionRuntimeVersion, SpWeightsRuntimeDbWeight, SpWeightsWeightV2Weight } from '@polkadot/types/lookup';
+import type { EthbloomBloom, EthereumBlock, EthereumHeader, EthereumLog, EthereumReceiptEip658ReceiptData, EthereumReceiptReceiptV3, EthereumTransactionAccessListItem, EthereumTransactionEip1559Transaction, EthereumTransactionEip2930Transaction, EthereumTransactionLegacyTransaction, EthereumTransactionTransactionAction, EthereumTransactionTransactionSignature, EthereumTransactionTransactionV2, EthereumTypesHashH64, EvmCoreErrorExitError, EvmCoreErrorExitFatal, EvmCoreErrorExitReason, EvmCoreErrorExitRevert, EvmCoreErrorExitSucceed, FinalityGrandpaEquivocationPrecommit, FinalityGrandpaEquivocationPrevote, FinalityGrandpaPrecommit, FinalityGrandpaPrevote, FpRpcTransactionStatus, FrameSupportDispatchDispatchClass, FrameSupportDispatchDispatchInfo, FrameSupportDispatchPays, FrameSupportDispatchPerDispatchClassU32, FrameSupportDispatchPerDispatchClassWeight, FrameSupportDispatchPerDispatchClassWeightsPerClass, FrameSupportDispatchRawOrigin, FrameSupportPalletId, FrameSupportTokensMiscBalanceStatus, FrameSystemAccountInfo, FrameSystemCall, FrameSystemError, FrameSystemEvent, FrameSystemEventRecord, FrameSystemExtensionsCheckGenesis, FrameSystemExtensionsCheckNonZeroSender, FrameSystemExtensionsCheckNonce, FrameSystemExtensionsCheckSpecVersion, FrameSystemExtensionsCheckTxVersion, FrameSystemExtensionsCheckWeight, FrameSystemLastRuntimeUpgradeInfo, FrameSystemLimitsBlockLength, FrameSystemLimitsBlockWeights, FrameSystemLimitsWeightsPerClass, FrameSystemPhase, ImpetusRuntimeOriginCaller, ImpetusRuntimeRuntime, PalletBalancesAccountData, PalletBalancesBalanceLock, PalletBalancesCall, PalletBalancesError, PalletBalancesEvent, PalletBalancesIdAmount, PalletBalancesReasons, PalletBalancesReserveData, PalletBaseFeeCall, PalletBaseFeeEvent, PalletCollectiveCall, PalletCollectiveError, PalletCollectiveEvent, PalletCollectiveRawOrigin, PalletCollectiveVotes, PalletDidCall, PalletDidError, PalletDidEvent, PalletDynamicFeeCall, PalletEthereumCall, PalletEthereumError, PalletEthereumEvent, PalletEthereumRawOrigin, PalletEvmCall, PalletEvmCodeMetadata, PalletEvmError, PalletEvmEvent, PalletGrandpaCall, PalletGrandpaError, PalletGrandpaEvent, PalletGrandpaStoredPendingChange, PalletGrandpaStoredState, PalletHotfixSufficientsCall, PalletHotfixSufficientsError, PalletLuckyNumberCall, PalletLuckyNumberError, PalletLuckyNumberEvent, PalletLuckyNumberLotteryConfig, PalletNftsAttributeDeposit, PalletNftsAttributeNamespace, PalletNftsCall, PalletNftsCancelAttributesApprovalWitness, PalletNftsCollectionConfig, PalletNftsCollectionDetails, PalletNftsCollectionMetadata, PalletNftsCollectionRole, PalletNftsCollectionSetting, PalletNftsDestroyWitness, PalletNftsError, PalletNftsEvent, PalletNftsItemConfig, PalletNftsItemDeposit, PalletNftsItemDetails, PalletNftsItemMetadata, PalletNftsItemMetadataDeposit, PalletNftsItemSetting, PalletNftsItemTip, PalletNftsMintSettings, PalletNftsMintType, PalletNftsMintWitness, PalletNftsPalletAttributes, PalletNftsPalletFeature, PalletNftsPendingSwap, PalletNftsPreSignedAttributes, PalletNftsPreSignedMint, PalletNftsPriceDirection, PalletNftsPriceWithDirection, PalletOcwGiveawayAssetType, PalletOcwGiveawayCall, PalletOcwGiveawayError, PalletOcwGiveawayEvent, PalletOcwGiveawayGiveAwayConfig, PalletOcwGiveawayKycStatus, PalletOcwGiveawayNftInfo, PalletOcwGiveawayRandomType, PalletOcwGiveawayTokenInfo, PalletSudoCall, PalletSudoError, PalletSudoEvent, PalletTimestampCall, PalletTransactionPaymentChargeTransactionPayment, PalletTransactionPaymentEvent, PalletTransactionPaymentReleases, PalletUniquesCall, PalletUniquesCollectionDetails, PalletUniquesCollectionMetadata, PalletUniquesDestroyWitness, PalletUniquesError, PalletUniquesEvent, PalletUniquesItemDetails, PalletUniquesItemMetadata, PalletUtilityCall, PalletUtilityError, PalletUtilityEvent, SpArithmeticArithmeticError, SpConsensusAuraSr25519AppSr25519Public, SpConsensusGrandpaAppPublic, SpConsensusGrandpaAppSignature, SpConsensusGrandpaEquivocation, SpConsensusGrandpaEquivocationProof, SpCoreEcdsaSignature, SpCoreEd25519Public, SpCoreEd25519Signature, SpCoreSr25519Public, SpCoreSr25519Signature, SpCoreVoid, SpRuntimeDigest, SpRuntimeDigestDigestItem, SpRuntimeDispatchError, SpRuntimeModuleError, SpRuntimeMultiSignature, SpRuntimeTokenError, SpRuntimeTransactionalError, SpVersionRuntimeVersion, SpWeightsRuntimeDbWeight, SpWeightsWeightV2Weight } from '@polkadot/types/lookup';
 
 declare module '@polkadot/types/types/registry' {
   interface InterfaceTypes {
@@ -98,6 +98,44 @@ declare module '@polkadot/types/types/registry' {
     PalletLuckyNumberError: PalletLuckyNumberError;
     PalletLuckyNumberEvent: PalletLuckyNumberEvent;
     PalletLuckyNumberLotteryConfig: PalletLuckyNumberLotteryConfig;
+    PalletNftsAttributeDeposit: PalletNftsAttributeDeposit;
+    PalletNftsAttributeNamespace: PalletNftsAttributeNamespace;
+    PalletNftsCall: PalletNftsCall;
+    PalletNftsCancelAttributesApprovalWitness: PalletNftsCancelAttributesApprovalWitness;
+    PalletNftsCollectionConfig: PalletNftsCollectionConfig;
+    PalletNftsCollectionDetails: PalletNftsCollectionDetails;
+    PalletNftsCollectionMetadata: PalletNftsCollectionMetadata;
+    PalletNftsCollectionRole: PalletNftsCollectionRole;
+    PalletNftsCollectionSetting: PalletNftsCollectionSetting;
+    PalletNftsDestroyWitness: PalletNftsDestroyWitness;
+    PalletNftsError: PalletNftsError;
+    PalletNftsEvent: PalletNftsEvent;
+    PalletNftsItemConfig: PalletNftsItemConfig;
+    PalletNftsItemDeposit: PalletNftsItemDeposit;
+    PalletNftsItemDetails: PalletNftsItemDetails;
+    PalletNftsItemMetadata: PalletNftsItemMetadata;
+    PalletNftsItemMetadataDeposit: PalletNftsItemMetadataDeposit;
+    PalletNftsItemSetting: PalletNftsItemSetting;
+    PalletNftsItemTip: PalletNftsItemTip;
+    PalletNftsMintSettings: PalletNftsMintSettings;
+    PalletNftsMintType: PalletNftsMintType;
+    PalletNftsMintWitness: PalletNftsMintWitness;
+    PalletNftsPalletAttributes: PalletNftsPalletAttributes;
+    PalletNftsPalletFeature: PalletNftsPalletFeature;
+    PalletNftsPendingSwap: PalletNftsPendingSwap;
+    PalletNftsPreSignedAttributes: PalletNftsPreSignedAttributes;
+    PalletNftsPreSignedMint: PalletNftsPreSignedMint;
+    PalletNftsPriceDirection: PalletNftsPriceDirection;
+    PalletNftsPriceWithDirection: PalletNftsPriceWithDirection;
+    PalletOcwGiveawayAssetType: PalletOcwGiveawayAssetType;
+    PalletOcwGiveawayCall: PalletOcwGiveawayCall;
+    PalletOcwGiveawayError: PalletOcwGiveawayError;
+    PalletOcwGiveawayEvent: PalletOcwGiveawayEvent;
+    PalletOcwGiveawayGiveAwayConfig: PalletOcwGiveawayGiveAwayConfig;
+    PalletOcwGiveawayKycStatus: PalletOcwGiveawayKycStatus;
+    PalletOcwGiveawayNftInfo: PalletOcwGiveawayNftInfo;
+    PalletOcwGiveawayRandomType: PalletOcwGiveawayRandomType;
+    PalletOcwGiveawayTokenInfo: PalletOcwGiveawayTokenInfo;
     PalletSudoCall: PalletSudoCall;
     PalletSudoError: PalletSudoError;
     PalletSudoEvent: PalletSudoEvent;
@@ -105,6 +143,14 @@ declare module '@polkadot/types/types/registry' {
     PalletTransactionPaymentChargeTransactionPayment: PalletTransactionPaymentChargeTransactionPayment;
     PalletTransactionPaymentEvent: PalletTransactionPaymentEvent;
     PalletTransactionPaymentReleases: PalletTransactionPaymentReleases;
+    PalletUniquesCall: PalletUniquesCall;
+    PalletUniquesCollectionDetails: PalletUniquesCollectionDetails;
+    PalletUniquesCollectionMetadata: PalletUniquesCollectionMetadata;
+    PalletUniquesDestroyWitness: PalletUniquesDestroyWitness;
+    PalletUniquesError: PalletUniquesError;
+    PalletUniquesEvent: PalletUniquesEvent;
+    PalletUniquesItemDetails: PalletUniquesItemDetails;
+    PalletUniquesItemMetadata: PalletUniquesItemMetadata;
     PalletUtilityCall: PalletUtilityCall;
     PalletUtilityError: PalletUtilityError;
     PalletUtilityEvent: PalletUtilityEvent;

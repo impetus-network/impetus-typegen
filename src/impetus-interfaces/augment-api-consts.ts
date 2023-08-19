@@ -48,6 +48,15 @@ declare module '@polkadot/api-base/types/consts' {
        **/
       [key: string]: Codec;
     };
+    giveAway: {
+      maxSet: u32 & AugmentedConst<ApiType>;
+      palletId: FrameSupportPalletId & AugmentedConst<ApiType>;
+      potDeposit: u128 & AugmentedConst<ApiType>;
+      /**
+       * Generic const
+       **/
+      [key: string]: Codec;
+    };
     grandpa: {
       /**
        * Max Authorities in use
@@ -85,6 +94,69 @@ declare module '@polkadot/api-base/types/consts' {
        * The maximum weight of a dispatch call that can be proposed and executed.
        **/
       maxProposalWeight: SpWeightsWeightV2Weight & AugmentedConst<ApiType>;
+      /**
+       * Generic const
+       **/
+      [key: string]: Codec;
+    };
+    nfts: {
+      /**
+       * The maximum approvals an item could have.
+       **/
+      approvalsLimit: u32 & AugmentedConst<ApiType>;
+      /**
+       * The basic amount of funds that must be reserved when adding an attribute to an item.
+       **/
+      attributeDepositBase: u128 & AugmentedConst<ApiType>;
+      /**
+       * The basic amount of funds that must be reserved for collection.
+       **/
+      collectionDeposit: u128 & AugmentedConst<ApiType>;
+      /**
+       * The additional funds that must be reserved for the number of bytes store in metadata,
+       * either "normal" metadata or attribute metadata.
+       **/
+      depositPerByte: u128 & AugmentedConst<ApiType>;
+      /**
+       * Disables some of pallet's features.
+       **/
+      features: u64 & AugmentedConst<ApiType>;
+      /**
+       * The maximum attributes approvals an item could have.
+       **/
+      itemAttributesApprovalsLimit: u32 & AugmentedConst<ApiType>;
+      /**
+       * The basic amount of funds that must be reserved for an item.
+       **/
+      itemDeposit: u128 & AugmentedConst<ApiType>;
+      /**
+       * The maximum length of an attribute key.
+       **/
+      keyLimit: u32 & AugmentedConst<ApiType>;
+      /**
+       * The max number of attributes a user could set per call.
+       **/
+      maxAttributesPerCall: u32 & AugmentedConst<ApiType>;
+      /**
+       * The max duration in blocks for deadlines.
+       **/
+      maxDeadlineDuration: u32 & AugmentedConst<ApiType>;
+      /**
+       * The max number of tips a user could send.
+       **/
+      maxTips: u32 & AugmentedConst<ApiType>;
+      /**
+       * The basic amount of funds that must be reserved when adding metadata to your item.
+       **/
+      metadataDepositBase: u128 & AugmentedConst<ApiType>;
+      /**
+       * The maximum length of data stored on-chain.
+       **/
+      stringLimit: u32 & AugmentedConst<ApiType>;
+      /**
+       * The maximum length of an attribute value.
+       **/
+      valueLimit: u32 & AugmentedConst<ApiType>;
       /**
        * Generic const
        **/
@@ -162,6 +234,45 @@ declare module '@polkadot/api-base/types/consts' {
        * transactions.
        **/
       operationalFeeMultiplier: u8 & AugmentedConst<ApiType>;
+      /**
+       * Generic const
+       **/
+      [key: string]: Codec;
+    };
+    uniques: {
+      /**
+       * The basic amount of funds that must be reserved when adding an attribute to an item.
+       **/
+      attributeDepositBase: u128 & AugmentedConst<ApiType>;
+      /**
+       * The basic amount of funds that must be reserved for collection.
+       **/
+      collectionDeposit: u128 & AugmentedConst<ApiType>;
+      /**
+       * The additional funds that must be reserved for the number of bytes store in metadata,
+       * either "normal" metadata or attribute metadata.
+       **/
+      depositPerByte: u128 & AugmentedConst<ApiType>;
+      /**
+       * The basic amount of funds that must be reserved for an item.
+       **/
+      itemDeposit: u128 & AugmentedConst<ApiType>;
+      /**
+       * The maximum length of an attribute key.
+       **/
+      keyLimit: u32 & AugmentedConst<ApiType>;
+      /**
+       * The basic amount of funds that must be reserved when adding metadata to your item.
+       **/
+      metadataDepositBase: u128 & AugmentedConst<ApiType>;
+      /**
+       * The maximum length of data stored on-chain.
+       **/
+      stringLimit: u32 & AugmentedConst<ApiType>;
+      /**
+       * The maximum length of an attribute value.
+       **/
+      valueLimit: u32 & AugmentedConst<ApiType>;
       /**
        * Generic const
        **/

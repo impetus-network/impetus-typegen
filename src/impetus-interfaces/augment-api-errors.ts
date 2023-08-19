@@ -130,6 +130,17 @@ declare module '@polkadot/api-base/types/errors' {
        **/
       [key: string]: AugmentedError<ApiType>;
     };
+    giveAway: {
+      AlreadyJoined: AugmentedError<ApiType>;
+      /**
+       * A lottery has not been configured.
+       **/
+      TooManyParticipants: AugmentedError<ApiType>;
+      /**
+       * Generic error
+       **/
+      [key: string]: AugmentedError<ApiType>;
+    };
     grandpa: {
       /**
        * Attempt to signal GRANDPA change with one already pending.
@@ -253,6 +264,188 @@ declare module '@polkadot/api-base/types/errors' {
        **/
       [key: string]: AugmentedError<ApiType>;
     };
+    nfts: {
+      /**
+       * The provided Item was already used for claiming.
+       **/
+      AlreadyClaimed: AugmentedError<ApiType>;
+      /**
+       * The item ID has already been used for an item.
+       **/
+      AlreadyExists: AugmentedError<ApiType>;
+      /**
+       * The approval had a deadline that expired, so the approval isn't valid anymore.
+       **/
+      ApprovalExpired: AugmentedError<ApiType>;
+      /**
+       * The provided attribute can't be found.
+       **/
+      AttributeNotFound: AugmentedError<ApiType>;
+      /**
+       * The witness data given does not match the current state of the chain.
+       **/
+      BadWitness: AugmentedError<ApiType>;
+      /**
+       * The provided bid is too low.
+       **/
+      BidTooLow: AugmentedError<ApiType>;
+      /**
+       * Collection ID is already taken.
+       **/
+      CollectionIdInUse: AugmentedError<ApiType>;
+      /**
+       * Can't delete non-empty collections.
+       **/
+      CollectionNotEmpty: AugmentedError<ApiType>;
+      /**
+       * The deadline has already expired.
+       **/
+      DeadlineExpired: AugmentedError<ApiType>;
+      /**
+       * Item's config already exists and should be equal to the provided one.
+       **/
+      InconsistentItemConfig: AugmentedError<ApiType>;
+      /**
+       * The provided data is incorrect.
+       **/
+      IncorrectData: AugmentedError<ApiType>;
+      /**
+       * The provided metadata might be too long.
+       **/
+      IncorrectMetadata: AugmentedError<ApiType>;
+      /**
+       * The item is locked (non-transferable).
+       **/
+      ItemLocked: AugmentedError<ApiType>;
+      /**
+       * Items within that collection are non-transferable.
+       **/
+      ItemsNonTransferable: AugmentedError<ApiType>;
+      /**
+       * Collection's attributes are locked.
+       **/
+      LockedCollectionAttributes: AugmentedError<ApiType>;
+      /**
+       * Collection's metadata is locked.
+       **/
+      LockedCollectionMetadata: AugmentedError<ApiType>;
+      /**
+       * Item's attributes are locked.
+       **/
+      LockedItemAttributes: AugmentedError<ApiType>;
+      /**
+       * Item's metadata is locked.
+       **/
+      LockedItemMetadata: AugmentedError<ApiType>;
+      /**
+       * Can't set more attributes per one call.
+       **/
+      MaxAttributesLimitReached: AugmentedError<ApiType>;
+      /**
+       * The max supply is locked and can't be changed.
+       **/
+      MaxSupplyLocked: AugmentedError<ApiType>;
+      /**
+       * All items have been minted.
+       **/
+      MaxSupplyReached: AugmentedError<ApiType>;
+      /**
+       * The provided max supply is less than the number of items a collection already has.
+       **/
+      MaxSupplyTooSmall: AugmentedError<ApiType>;
+      /**
+       * The given item has no metadata set.
+       **/
+      MetadataNotFound: AugmentedError<ApiType>;
+      /**
+       * The method is disabled by system settings.
+       **/
+      MethodDisabled: AugmentedError<ApiType>;
+      /**
+       * Mint has already ended.
+       **/
+      MintEnded: AugmentedError<ApiType>;
+      /**
+       * Mint has not started yet.
+       **/
+      MintNotStarted: AugmentedError<ApiType>;
+      /**
+       * Config for a collection or an item can't be found.
+       **/
+      NoConfig: AugmentedError<ApiType>;
+      /**
+       * The signing account has no permission to do the operation.
+       **/
+      NoPermission: AugmentedError<ApiType>;
+      /**
+       * The provided account is not a delegate.
+       **/
+      NotDelegate: AugmentedError<ApiType>;
+      /**
+       * Item is not for sale.
+       **/
+      NotForSale: AugmentedError<ApiType>;
+      /**
+       * The item has reached its approval limit.
+       **/
+      ReachedApprovalLimit: AugmentedError<ApiType>;
+      /**
+       * Some roles were not cleared.
+       **/
+      RolesNotCleared: AugmentedError<ApiType>;
+      /**
+       * The named owner has not signed ownership acceptance of the collection.
+       **/
+      Unaccepted: AugmentedError<ApiType>;
+      /**
+       * No approval exists that would allow the transfer.
+       **/
+      Unapproved: AugmentedError<ApiType>;
+      /**
+       * The given item ID is unknown.
+       **/
+      UnknownCollection: AugmentedError<ApiType>;
+      /**
+       * The given item ID is unknown.
+       **/
+      UnknownItem: AugmentedError<ApiType>;
+      /**
+       * Swap doesn't exist.
+       **/
+      UnknownSwap: AugmentedError<ApiType>;
+      /**
+       * The delegate turned out to be different to what was expected.
+       **/
+      WrongDelegate: AugmentedError<ApiType>;
+      /**
+       * The duration provided should be less than or equal to `MaxDeadlineDuration`.
+       **/
+      WrongDuration: AugmentedError<ApiType>;
+      /**
+       * The provided namespace isn't supported in this call.
+       **/
+      WrongNamespace: AugmentedError<ApiType>;
+      /**
+       * The extrinsic was sent by the wrong origin.
+       **/
+      WrongOrigin: AugmentedError<ApiType>;
+      /**
+       * The owner turned out to be different to what was expected.
+       **/
+      WrongOwner: AugmentedError<ApiType>;
+      /**
+       * The provided setting can't be set.
+       **/
+      WrongSetting: AugmentedError<ApiType>;
+      /**
+       * The provided signature is incorrect.
+       **/
+      WrongSignature: AugmentedError<ApiType>;
+      /**
+       * Generic error
+       **/
+      [key: string]: AugmentedError<ApiType>;
+    };
     sudo: {
       /**
        * Sender must be the Sudo account
@@ -292,6 +485,84 @@ declare module '@polkadot/api-base/types/errors' {
        * and the new runtime.
        **/
       SpecVersionNeedsToIncrease: AugmentedError<ApiType>;
+      /**
+       * Generic error
+       **/
+      [key: string]: AugmentedError<ApiType>;
+    };
+    uniques: {
+      /**
+       * The item ID has already been used for an item.
+       **/
+      AlreadyExists: AugmentedError<ApiType>;
+      /**
+       * Invalid witness data given.
+       **/
+      BadWitness: AugmentedError<ApiType>;
+      /**
+       * The provided bid is too low.
+       **/
+      BidTooLow: AugmentedError<ApiType>;
+      /**
+       * The item or collection is frozen.
+       **/
+      Frozen: AugmentedError<ApiType>;
+      /**
+       * The item ID is already taken.
+       **/
+      InUse: AugmentedError<ApiType>;
+      /**
+       * The item is locked.
+       **/
+      Locked: AugmentedError<ApiType>;
+      /**
+       * The max supply has already been set.
+       **/
+      MaxSupplyAlreadySet: AugmentedError<ApiType>;
+      /**
+       * All items have been minted.
+       **/
+      MaxSupplyReached: AugmentedError<ApiType>;
+      /**
+       * The provided max supply is less to the amount of items a collection already has.
+       **/
+      MaxSupplyTooSmall: AugmentedError<ApiType>;
+      /**
+       * There is no delegate approved.
+       **/
+      NoDelegate: AugmentedError<ApiType>;
+      /**
+       * The signing account has no permission to do the operation.
+       **/
+      NoPermission: AugmentedError<ApiType>;
+      /**
+       * Item is not for sale.
+       **/
+      NotForSale: AugmentedError<ApiType>;
+      /**
+       * The named owner has not signed ownership of the collection is acceptable.
+       **/
+      Unaccepted: AugmentedError<ApiType>;
+      /**
+       * No approval exists that would allow the transfer.
+       **/
+      Unapproved: AugmentedError<ApiType>;
+      /**
+       * The given item ID is unknown.
+       **/
+      UnknownCollection: AugmentedError<ApiType>;
+      /**
+       * The given item ID is unknown.
+       **/
+      UnknownItem: AugmentedError<ApiType>;
+      /**
+       * The delegate turned out to be different to what was expected.
+       **/
+      WrongDelegate: AugmentedError<ApiType>;
+      /**
+       * The owner turned out to be different to what was expected.
+       **/
+      WrongOwner: AugmentedError<ApiType>;
       /**
        * Generic error
        **/
