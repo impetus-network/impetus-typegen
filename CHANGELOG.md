@@ -1,3 +1,10 @@
+## [1.3.5](https://github.com/dnt-team/impetus-typegen/compare/v1.3.4...v1.3.5) (2023-08-19)
+
+
+### Bug Fixes
+
+* **update giveaway:** update give away ([cf747e9](https://github.com/dnt-team/impetus-typegen/commit/cf747e9c814f1b1de44d004f0a15b0a36d479d4b))
+
 ## [1.3.4](https://github.com/dnt-team/impetus-typegen/compare/v1.3.3...v1.3.4) (2023-08-10)
 
 
