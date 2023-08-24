@@ -1,3 +1,10 @@
+## [1.3.7](https://github.com/dnt-team/impetus-typegen/compare/v1.3.6...v1.3.7) (2023-08-24)
+
+
+### Bug Fixes
+
+* **update blockchain:** new update from impetus ([6c35b51](https://github.com/dnt-team/impetus-typegen/commit/6c35b511055233e8e313cf946fc1b5dd4623fa96))
+
 ## [1.3.6](https://github.com/dnt-team/impetus-typegen/compare/v1.3.5...v1.3.6) (2023-08-22)
 
 
