@@ -272,7 +272,7 @@ declare module '@polkadot/api-base/types/events' {
       Participated: AugmentedEvent<ApiType, [index: u32, who: AccountId32], { index: u32, who: AccountId32 }>;
       Results: AugmentedEvent<ApiType, [block: u32, results: ITuple<[Bytes, Vec<U256>]>], { block: u32, results: ITuple<[Bytes, Vec<U256>]> }>;
       RewardClaimed: AugmentedEvent<ApiType, [index: u32, winner: AccountId32], { index: u32, winner: AccountId32 }>;
-      Winner: AugmentedEvent<ApiType, [index: u32, who: AccountId32], { index: u32, who: AccountId32 }>;
+      Winner: AugmentedEvent<ApiType, [index: u32, who: AccountId32, status: bool], { index: u32, who: AccountId32, status: bool }>;
       /**
        * Generic event
        **/

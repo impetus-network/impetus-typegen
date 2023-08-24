@@ -187,9 +187,11 @@ declare module '@polkadot/api-base/types/storage' {
       blockToResults: AugmentedQuery<ApiType, (arg: u32 | AnyNumber | Uint8Array) => Observable<Option<ITuple<[Bytes, Vec<U256>]>>>, [u32]> & QueryableStorageEntry<ApiType, [u32]>;
       giveaway: AugmentedQuery<ApiType, (arg: u32 | AnyNumber | Uint8Array) => Observable<Option<PalletOcwGiveawayGiveawayConfig>>, [u32]> & QueryableStorageEntry<ApiType, [u32]>;
       giveawayIndex: AugmentedQuery<ApiType, () => Observable<u32>, []> & QueryableStorageEntry<ApiType, []>;
+      giveawayToUser: AugmentedQuery<ApiType, (arg1: u32 | AnyNumber | Uint8Array, arg2: AccountId32 | string | Uint8Array) => Observable<bool>, [u32, AccountId32]> & QueryableStorageEntry<ApiType, [u32, AccountId32]>;
       palletManager: AugmentedQuery<ApiType, (arg: AccountId32 | string | Uint8Array) => Observable<bool>, [AccountId32]> & QueryableStorageEntry<ApiType, [AccountId32]>;
-      participants: AugmentedQuery<ApiType, (arg: u32 | AnyNumber | Uint8Array) => Observable<BTreeSet<AccountId32>>, [u32]> & QueryableStorageEntry<ApiType, [u32]>;
+      participants: AugmentedQuery<ApiType, (arg1: u32 | AnyNumber | Uint8Array, arg2: u32 | AnyNumber | Uint8Array) => Observable<Option<AccountId32>>, [u32, u32]> & QueryableStorageEntry<ApiType, [u32, u32]>;
       roundWinner: AugmentedQuery<ApiType, (arg: u32 | AnyNumber | Uint8Array) => Observable<Option<AccountId32>>, [u32]> & QueryableStorageEntry<ApiType, [u32]>;
+      totalParticipantByGiveaway: AugmentedQuery<ApiType, (arg: u32 | AnyNumber | Uint8Array) => Observable<u32>, [u32]> & QueryableStorageEntry<ApiType, [u32]>;
       /**
        * Generic query
        **/

@@ -233,6 +233,7 @@ declare module '@polkadot/api-base/types/errors' {
        **/
       TooMany: AugmentedError<ApiType>;
       TooManyParticipants: AugmentedError<ApiType>;
+      UserIsNotVerified: AugmentedError<ApiType>;
       /**
        * Generic error
        **/
